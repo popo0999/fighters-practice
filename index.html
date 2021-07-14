@@ -1,0 +1,655 @@
+<!-- 參考此頁面https://www.fighters.co.jp/global/taiwanese/stadium01.html#p01 -->
+<!-- 沒有RWD，模仿的應該是此網頁最大寬度畫面，純粹一頁式網站 -->
+<!-- 其實還不太清楚flex在做什麼QQ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fighters</title>
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <style>
+        /*reset */
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+/* ------------------------正文開始(?) -------------------------------------------------------*/
+        body{
+            font-family: Arial, Helvetica, sans-serif, "微軟正黑體";
+            margin: 0 auto;
+            background: #F1F1F1;
+            max-width: 1200px;
+            width: 1200px;
+            line-height: 0;
+        }
+/* ------------------------------header----------------------------------------------------- */
+        .wrapper{
+            position: relative;
+            width: 1200px;
+            background-color: #00508E;
+            height: 77px;
+            /* margin-bottom: 23px; */
+        }
+        .wrapper .logo1{
+            /* background-color: rgb(112, 156, 156); */
+            box-sizing: border-box;
+            /* padding: 10px 0; */
+            height: 77px;
+            width: 286px;
+            /* margin-top: 2px;             */
+            /* width: 261px; */
+            margin-left: 100px;
+            /* margin-top: 20px; */
+            overflow: hidden;
+            /* line-height: 60px; */
+        }
+        .wrapper .logo1 img{
+            /* background-color: #cca; */
+            padding-top: 8px;
+            height: 86%;
+            /* width: 100%; */
+            /* line-height: 100px; */
+            /* margin-top: 8px; */
+            /* line-height: 62px; */
+            /* margin-left: 100px; */
+        }
+        .logo1 a{
+            /* overflow: hidden; */
+            /* background-color: #aac; */
+            height: 0;
+        }
+
+        .wrapper span{
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 16px;
+            line-height: 40px;
+        }
+        .wrapper .btn1 span{
+            box-sizing: border-box;
+            padding-left: 5px;
+        }
+        .btn1 , .btn2{
+            box-sizing: border-box;
+            background-color: #000;
+            width: 130px;
+            height: 38px;
+            color: white;
+            text-align: center;
+            /* margin: auto; */
+            font-size: 14px;
+            line-height: 40px;
+            top: 0;
+            position: absolute;
+            left: 837px; 
+        }
+        .btn2{
+            left: 970px;
+        }
+        .btn1 img, .btn2 img{
+            box-sizing: border-box;
+            /* padding-top: 3px; */
+            /* padding: 5px 2px; */
+            /* position: absolute; */
+            /* border: 3px solid ; */
+            /* width: 19px; */
+            /* height: 16px; */
+            /* right: 85px; */
+            /* top: 5px; */
+        }
+        .btn2 img{
+            /* position: absolute;
+            top: 100px;
+            width: 15px;
+            height: 5px; */
+            padding-top: 5px;
+            /* padding-left: px; */
+        }
+        .btn1 img{
+            box-sizing: border-content;
+            padding-top: 5px;  
+        }
+        .nav1{
+            width: 1200px;
+            /* margin-top: 0; */
+            background-color: #C5AD6F;
+            height: 51px;
+        }
+        .nav1 nav{
+            margin: 0 auto;
+            /* background-color: #fff; */
+            width: 1000px;
+        }
+        .nav1 nav ul{
+            display: flex;
+        }
+        .nav1 li{
+            list-style-type: none;
+            width: calc( 1000px - 7px / 6 );
+            border: 0.5px solid rgb(94, 94, 94);
+            text-align: center;
+            line-height: 50px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+/* ---------------------------------section-banner------------------------------------------------------------- */
+        .banner{
+            width: 1200px;
+            position: relative;
+            height: 500px;
+        }
+        .theme{
+            background-color: #000;
+            color: #FFF;
+            width: 320px;
+            height: 90px;
+            position: absolute;
+            top: 177px;
+            right: 0;
+        }    
+        .theme h3{
+            font-size: 32px;
+            margin-left: 20px;
+            margin-top: 40px;
+        }     
+        .theme span{
+            margin-left: 20px;
+            font-size: 14px;
+            text-align: left;
+            line-height: 64px;        
+            }
+            /* ---------------------------------section-container------------------------------------------------------------- */
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+            /* height: 2576.8px; */
+            background-color: #fff;
+            /* position: relative; */
+        }
+        .content{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .content1{
+            box-sizing: border-box;
+            height: 50px;
+            font-size: 12px;
+            font-weight: bold;
+            padding-top: 20px;
+        }
+        .content1 a{
+            color: rgb(116, 116, 116);
+        }
+        .content2{
+            box-sizing: border-box;
+            /* border: 1px solid red; */
+            line-height: 50px;
+        }
+        .content2 img{
+            margin: 10px 0;
+        }
+        .content2 h3{
+            font-weight: 700;
+            font-size: 28px;
+        }
+        .content2 p{
+            /* background-color: #ccc; */
+            font-weight: 500;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .colorpic{
+            box-sizing: border-box;
+            padding: 20px 0 20px 450px;
+            /* margin: 40px 0 40px 450px; */
+        }
+        .colorpic1{ 
+            /* background-color: #ccc; */
+            padding: 60px 459px;
+        }
+        .content3{
+            /* border: 1px solid rgb(0, 107, 139); */
+            margin-top: 20px;
+            line-height: 30px;
+        }
+        .content3 h5{
+            margin-top: 7px;
+            color: #00508E;
+            font-weight: bolder;
+            font-size: 18px;
+        }
+        .content3 hr{
+            margin-top: 0;
+            /* margin: 0; */
+        }
+        .content3 h6{
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 2px;
+            /* background-color: #aaa; */
+        }
+
+        .content3 p{
+            line-height: 1.5em;
+            /* font-weight: bold; */
+        }
+        .content3 .sp{
+            /* background-color: #ccc; */
+            margin-top: 55px;
+            margin-bottom: 25px;
+        }
+        .content3 table{
+            /* background-color:red; */
+            margin-left: 2px;
+            margin-top: 5px;
+            width: 100%;
+        }       
+        .content3 th{
+            box-sizing: border-box;
+            width: 200px;
+            height: 45px;
+            text-align: left;
+            font-weight: bold;
+            vertical-align: middle;
+            padding-left: 10px; 
+        }
+        .content3 span{
+            /* vertical-align: middle; */
+            font-size: 14px;
+            /* background-color: #ccc; */
+            /* line-height: 0.px; */
+            display: block;
+            margin-top: -5px;
+        }
+
+        .content3 td{
+            vertical-align: middle;
+            padding: 10px 0;   
+
+        }
+        
+        tbody tr:nth-child(2n+1){
+        background-color: #f2f2f2;
+        }
+/* -----------------------footer--------------------------------------- */
+        .nav2{
+            box-sizing: border-box;
+            /* background-color: #aaa; */
+            height: 166px;
+            /* width: 875px; */
+            /* margin: 0 auto; */
+            /* margin-bottom: 20px; */
+            
+        }
+        .nav2 nav{
+            width: 875px;
+            margin: 0 auto;
+            display: flex;
+            padding: 0 209px;
+        }
+        .nav2 a{
+            box-sizing: border-box;
+            display: block;
+            width: 125px;
+            height: 166px;
+            /* background-color: rgb(106, 177, 153); */
+            /* border:1px solid darkslategray; */
+            padding: 30px 20px;
+            /* margin: 0; */
+            text-decoration: none;
+            
+        }
+        .nav2 a:hover{
+            background-color: #cac9c9;
+        }
+        .nav2  img{
+            /* padding: 0px; */
+            /* width: 36px; */
+            height: 36px;
+            /* text-align: left; */
+            /* background-color: #fff; */
+            padding-top: 10px;
+            padding-left: 25px;
+        }
+        .stadiumpic img{
+            padding-left: 5px;
+        }
+        .nav2  span{
+            /* background-color: rgb(148, 101, 101); */
+            padding-top: 10px;
+            display: block;
+            line-height: 20px;
+            text-align: center;
+            font-weight: bold;
+            color:#00508E ;
+        }
+        .nav3{
+            /* background-color: rgb(56, 56, 56); */
+            display: flex;
+            color: white;
+        }
+        .nav3 .content4{
+            width: 200px;
+            height: 445px;
+            box-sizing: border-box;
+            /* background-color: #fff; */
+            margin: 0;
+            padding-left: 75px;
+
+        }
+        .nav3 .content4 img{
+            padding-top: 30px;
+            padding-left: px;
+            width: 120px;
+        }
+        .nav3 .content5 , .nav3 .content6{
+            /* background-color: rgb(85, 54, 54); */
+            width: 252px;
+            height: 445px;
+            display: inline-block;
+        }
+        .content6 , .content5 nav {
+            font-size: 16px;
+            padding: 0px 20px;
+            line-height: 24px;
+            
+        }
+        .content6 h6 , .content5 h6{
+            box-sizing: border-content;
+            padding-top: 30px;
+            font-weight: bold;
+        }
+        .content6 ul ,.content5 ul{
+            text-indent: 0px;
+        }
+        .content6 li ,.content5 li{
+            text-indent: 15px;
+            font-weight: bold;
+            line-height: 24px;
+            font-size: 13px;
+            list-style-type: none;            
+        }
+        .content6 li img , .content5 li img{
+            width: 5px;
+            padding-right: 5px;
+        }
+        .content6 li a , .content5 li a{
+            text-decoration: none;
+            color: #ccc;
+        }
+        .social{
+            box-sizing: border-content;
+            width: 225px;
+            height: 50px;
+            padding-left: 30px;
+            padding-top: 25px;
+        }
+        .social img{
+            margin: 0px 5px;
+            width: 23px;
+        }
+        .content7 iframe{
+            box-sizing: border-content;
+            padding-top: 30px;
+            padding-left: 30px;
+            width: 360px;
+            height: 300px;
+        }
+        .footer{
+            text-align: center;
+            font-size: 12px;
+            width: 1200px;
+            height: 43px;
+            line-height: 43px;
+            /* background-color: rgb(56, 56, 56); */
+            border-top: 1px solid #666;
+            color: #999
+        }
+        .nav3,.footer{
+            background-color: #333;
+        }
+        .info_black{
+            background-color: #000;
+            color: #FFF;
+        }
+        
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo1">
+               <a href="https://www.fighters.co.jp/global/taiwanese/index.html"><img src="https://www.fighters.co.jp/global/taiwanese/img/2019_header_logo.png" alt="" class="logo"></a> 
+            </div>
+            
+            <div class="btn1"> 
+                <img src="https://www.fighters.co.jp/global/taiwanese/img/2019_header_sns_icon.png" alt=""><span>SNS</span>
+             </div>
+             <div class="btn2">
+                <img src="https://www.fighters.co.jp/global/taiwanese/img/2019_header_lang_icon.png" alt="" >
+                <span>Japanese</span>
+            </div>
+        </div>
+
+        <div class="nav1">
+            <nav>
+                <ul>
+                    <li>球員介紹</li>
+                    <li>賽程資訊</li>
+                    <li>常見問題</li>
+                    <li>購票資訊</li>
+                    <li>周邊商品</li>
+                    <li class="info_black">場館資訊</li>
+                </ul>
+            </nav>
+        </div>
+        
+
+    </header>
+    <section>
+        <div class="banner">
+            <img src="https://www.fighters.co.jp/global/taiwanese/img/cont_main04.jpg" alt="">
+                <div class="theme">
+                    <h3>場 館 資 訊</h3>
+                    <span>S T A D I U M</span>
+                 </div>       
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="content1">
+                    <a href="">首頁</a>  ▶
+                    <a href="">場館資訊</a>  ▶
+                    <strong>札幌巨蛋・東京巨蛋</strong>
+                </div>
+                <div class="content2">
+                    <h3><img src="https://www.fighters.co.jp/global/taiwanese/img/cont_title_BG.png" alt=""> 前往札幌巨蛋的交通指引</h3>
+                    <p>最靠近的車站為地下鐵東豐線福住站。從車站徒步約10分鐘。</p>
+                    <img src="https://www.fighters.co.jp/global/taiwanese/img/gameinfo_ph03.jpg" alt="">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d23338.040205499918!2d141.41000500000004!3d43.015019!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2a76b1aae78ab68b!2z5pyt5bmM5beo6JuL!5e0!3m2!1szh-TW!2sjp!4v1624447814607!5m2!1szh-TW!2sjp" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <img class="colorpic" src="https://www.fighters.co.jp/global/taiwanese/img/cont_separator.png" alt="">
+                </div>
+                <div class="content2">
+                    <h3><img src="https://www.fighters.co.jp/global/taiwanese/img/cont_title_BG.png" alt="">前往東京巨蛋的交通指引</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12959.346140870588!2d139.751891!3d35.70564!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5058b288249e640e!2z5p2x5Lqs5beo6JuL!5e0!3m2!1szh-TW!2sjp!4v1624448670291!5m2!1szh-TW!2sjp" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="content3">
+                    <h5>交通指引</h5>
+                    <h6>搭電車</h6>
+                    <hr>
+                    <p>JR中央線、總武線「水道橋站」徒步約7分鐘，三田線「水道橋駅」徒步約15分鐘，<br>丸之內線「後樂園站」徒步約7分鐘，南北線「後樂園站」徒步約7分鐘
+                    </p>
+                    <h6>開車</h6>
+                    <hr>
+                    <p>請走首都高速5號線，從池袋、高島平方向前往的旅客請由「飯田橋匝道」下。<br>從銀座、新宿方向前往的旅客，請由「西神田匝道」下，經外堀通往秋葉原方向前進。</p>
+
+                </div>
+                <div class="content3">
+                    <h5 class="sp">停車場</h5>
+                    <h6>東京巨蛋停車場</h6>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th class="th1">營業時間</th>
+                                    <td>9:00～23:00（周末及國定假日 8:00～23:00）<br>
+                                    <span>※若東京巨蛋有舉辦活動，期間內會將營業時間延長至活動結束</span> </td>
+                                </tr>
+                                <tr>
+                                    <th>可容納數量</th>
+                                    <td>400台（其中9格為身障車位）</td> 
+                                </tr>
+                                <tr>
+                                    <th>費用</th>
+                                    <td>小型車每30分鐘400日圓</td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                    <h6>LaQua停車場</h6>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>營業時間</th>
+                                    <td>24小時營業</td>
+                                </tr>
+                                <tr>
+                                    <th>可容納數量</th>
+                                    <td>200台（其中2格為身障車位）</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <th>費用</th>
+                                    <td>小型車每30分鐘400日圓</td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+                <img class="colorpic1" src="https://www.fighters.co.jp/global/taiwanese/img/cont_separator.png" alt="">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="nav2">
+            <nav>
+                <a href=""><img src="https://www.fighters.co.jp/global/taiwanese/img/cont_footer_icon03.png" alt=""><span>球員介紹<br>PLAYERS</span></img></a>
+                <a href=""><img src="https://www.fighters.co.jp/global/taiwanese/img/cont_footer_icon01.png" alt=""><span>賽程資訊<br>SCHEDULE</span></img></a>
+                <a href=""><img src="https://www.fighters.co.jp/global/taiwanese/img/cont_footer_icon07.png" alt=""><span>常見問題<br>FAQ</span></img></a>
+                <a href=""><img src="https://www.fighters.co.jp/global/taiwanese/img/cont_footer_icon02.png" alt=""><span>購票資訊<br>TICKETS</span></img></a>
+                <a href=""><img src="https://www.fighters.co.jp/global/taiwanese/img/cont_footer_icon05.png" alt=""><span>周邊商品<br>GOODS</span></img></a>
+                <a href=""> <div class="stadiumpic"><img src="https://www.fighters.co.jp/global/taiwanese/img/cont_footer_icon04.png" alt=""><span>場館資訊<br>STADIUM</span></img></div></a>
+            </nav>
+        </div>
+        <div class="nav3">
+            <div class="content4">
+                <img src="https://www.fighters.co.jp/global/taiwanese/img/footer_logo.png" alt="">
+            </div>
+            <div class="content5">
+                <nav>
+                    <h6>球員介紹</h6><hr>
+                    <ul>
+                        <li> <img src="https://www.fighters.co.jp/global/taiwanese/img/link_arrow_white.svg" alt=""><a href="">投手</a> </li>
+                        <li><img src="https://www.fighters.co.jp/global/taiwanese/img/link_arrow_white.svg" alt=""><a href="">捕手</a> </li>
+                        <li><img src="https://www.fighters.co.jp/global/taiwanese/img/link_arrow_white.svg" alt=""><a href="">內野手</a> </li>
+                        <li><img src="https://www.fighters.co.jp/global/taiwanese/img/link_arrow_white.svg" alt=""><a href="">外野手</a> </li>
+                        <li><img src="https://www.fighters.co.jp/global/taiwanese/img/link_arrow_white.svg" alt=""><a href="">總教練</a> </li>
+                        <li><img src="https://www.fighters.co.jp/global/taiwanese/img/link_arrow_white.svg" alt=""><a href="">球員一覽</a> </li>
+                    </ul>
+
+                    <h6>場館資訊</h6><hr>
+                    <ul>
+                        <!-- (li>img>a) -->
+                        <li><img src="https://www.fighters.co.jp/global/taiwanese/img/link_arrow_white.svg" alt=""><a href="">札幌巨蛋</a></img></li>
+                        <li><img src="https://www.fighters.co.jp/global/taiwanese/img/link_arrow_white.svg" alt=""><a href="">東京巨蛋</a></img></li>
+                    </ul>
+                </nav>
+                <div class="social">
+                    <img src="https://www.fighters.co.jp/global/taiwanese/img/header_FB.png" alt=""><a href=""></a></img>
+                    <img src="https://www.fighters.co.jp/global/taiwanese/img/header_TW.png" alt=""><a href=""></a></img>
+                    <img src="https://www.fighters.co.jp/global/taiwanese/img/header_Insta.png" alt=""><a href=""></a></img>
+                    <img src="https://www.fighters.co.jp/global/taiwanese/img/header_YT.png" alt=""><a href=""></a></img>
+                    <img src="https://www.fighters.co.jp/global/taiwanese/img/header_LINE.png" alt=""><a href=""></a></img>
+                </div>
+            </div>
+            <div class="content6">
+                <nav>
+                    <ul>
+                        <!-- (li>img>a) -->
+                        <h6>賽程資訊</h6><hr>
+                        <li><img src="https://www.fighters.co.jp/global/taiwanese/img/link_arrow_white.svg" alt=""><a href="">賽程表</a></img></li>
+                    </ul>
+                    <ul>
+                        <h6>賽程資訊</h6><hr>
+                        <li><img src="https://www.fighters.co.jp/global/taiwanese/img/link_arrow_white.svg" alt=""><a href="">購票方法</a></img></li>
+                        <li><img src="https://www.fighters.co.jp/global/taiwanese/img/link_arrow_white.svg" alt=""><a href="">StubHub購票</a></img></li>
+                    </ul>
+                    <ul>
+                        <h6>周邊商品</h6><hr>
+                        <li><img src="https://www.fighters.co.jp/global/taiwanese/img/link_arrow_white.svg" alt=""><a href="">周邊商品</a></img></li>
+                    </ul>
+                    <ul>
+                        <h6>常見問題</h6><hr>
+                        <li><img src="https://www.fighters.co.jp/global/taiwanese/img/link_arrow_white.svg" alt=""><a href="">常見問題</a></img></li>
+                    </ul>   
+                </nav>
+            </div>
+            <div class="content7">
+                <iframe src="https://www.facebook.com/fightersintaiwan" ></iframe>
+
+            </div>
+
+        </div>
+        <div class="footer">
+            <p>Copyright © HOKKAIDO NIPPON-HAM FIGHTERS All Rights Reserved. &nbsp;&nbsp;&nbsp;&nbsp;李紫蓉仿製</p>
+        </div>
+    </footer>
+</body>
+
+</html>
